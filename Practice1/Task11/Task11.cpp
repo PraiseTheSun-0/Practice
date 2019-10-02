@@ -4,11 +4,10 @@ using namespace std;
 
 int main()
 {
-	int number, pow, result = 1;
+	int number, result = 1;
 	cin >> number;
-	cin >> pow;
-	for (int i = 1; i <= pow; i++) {
-		result *= number;
+	for (int i = 1; i <= number; i++) {
+		result *= i;
 	}
 	cout << result << endl;
 }

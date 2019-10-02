@@ -11,6 +11,8 @@ int main()
 	bool flag;
 	do {
 		answer = rand() % 101;
+		//Для проверки раскоментировать строку ниже
+		//cout << "Правильный ответ: " << answer << endl;
 		counter = 0;
 		flag = false;
 		cout << "Попробуйте угадать число от 0 до 100 включительно" << endl;
