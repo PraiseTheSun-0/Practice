@@ -4,28 +4,35 @@ using namespace std;
 
 int main()
 {
-	int n;
+	int n, counter=1, temp;
 	cin >> n;
 	int *min = new int[n];
 	int *A = new int[n];
 	for (int i = 0; i < n; i++)	cin >> A[i];
-	for (int k = 1; k <= n; k++) {
-		for (int j = 1; j <= k && j <= 5; j++) {
-			for (int l = 0; l < j; l++) {
-				min[l] = A[l];
-			}
-			for (int b = 0; b < j; b++) {
-				for (int b = 0; b < j - 1; b++){
-					if (min[b] < min[b + 1]) {
-						int temp = min[b];
-						min[b] = min[b + 1];
-						min[b + 1] = temp;
-					}
+	while (counter <= n) {
+		for (int k = 0; k < counter; k++)min[k] = A[k];
+		for (int m = 1; m < counter; m++) {
+			for (int l = 0; l < counter-1; l++) {
+				if (min[l] > min[l + 1]) {
+					temp = min[l];
+					min[l] = min[l + 1];
+					min[l + 1] = temp;
 				}
 			}
-
-			cout << min[j-1] << ' ';
+		}
+		for (int f = 1; f < counter && f < 5; f++) {
+			for (int r = 0; r < counter - 1 && r < 4; r++) {
+				if (min[r + 1] > min[r]) {
+					temp = min[r];
+					min[r] = min[r + 1];
+					min[r + 1] = temp;
+				}
+			}
+		}
+		for (int b = 0; b < counter && b < 5; b++) {
+			cout << min[b] << ' ';
 		}
 		cout << endl;
+		counter++;
 	}
 }
