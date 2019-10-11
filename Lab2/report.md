@@ -30,45 +30,58 @@
 
 #### Ход рыботы
 
+![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab2/Screenshots/Screenshot_00.png) 
+
+
 Напишем программу для выполенения поставленной задачи
 
-    bool isEqual(double a, double b) {
-        double e = 0.00000001;
-        return (abs(a - b) < e);
-    }
+```c++
+bool isEqual(double a, double b) {
+    double e = 0.00000001;
+    return (abs(a - b) < e);
+}
 
-    int main() {
-        setlocale(LC_ALL, "Russian");
-        double a, b, x1, x2, dx, y, x;
-        cout << "Введите a, b, начало промежутка, конец промежутка, dx" << endl;
-        cin >> a >> b >> x1 >> x2 >> dx;
-        if (!dx) {
-            cout << "Шаг не может быть нулём" << endl;
-            return 0;
-        }
-        if (x1 > x2 && dx > 0 || x2 > x1 && dx < 0) {
-            cout << "С выбранным шагом нельзя прийти из начала в конец" << endl;
-            return 0;
-        }
-        for (x = x1; x < x2 || isEqual(x, x2); x += dx) {	
-            if (x >= x1 && x < a || isEqual(x, a)) {
-                y = exp(x) / (3.0 + sin(x));
-            }
-            else if (x > a && x < b) {
-                y = log(x) + x * x;
-            }
-            else {
-                y = 1.0 + sin(-x);
-            }
-            cout << "При х = " << x << ", y = " << y << endl;
-        }
-    }
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double a, b, x1, x2, dx, y, x, min = numeric_limits<double>::infinity(), max = -numeric_limits<double>::infinity();
+	cout << "Введите a, b, начало промежутка, конец промежутка, dx" << endl;
+	cin >> a >> b >> x1 >> x2 >> dx;
+	if (!dx) {
+		cout << "Шаг не может быть нулём" << endl;
+		return 0;
+	}
+	if (x1 > x2 && dx > 0 || x2 > x1 && dx < 0) {
+		cout << "С выбранным шагом нельзя прийти из начала в конец" << endl;
+		return 0;
+	}
+	for (x = x1; x < x2 || isEqual(x, x2); x += dx) {	
+		if (x >= x1 && x < a || isEqual(x, a)) {
+			y = exp(x) / (3.0 + sin(x));
+		}
+		else if (x > a && x < b) {
+			y = log(x) + x * x;
+		}
+		else {
+			y = 1.0 + sin(-x);
+		}
+		if (y > max)max = y;
+		if (y < min)min = y;
+		cout << "При х = " << x << ", y = " << y << endl;
+	}
+	cout << "Минимальное значение - " << min << ", а максимальное - " << max << endl;
+}
+```
 
 Запустим программу с значениями `a = 0.7`, `b = 1.2`, `x1 = 0.5`, `x1 = 1.5`, `dx = 0.05`
 
-![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab2/Screenshots/Screenshot_01.png "Рис. 1. Ввод данных")
+![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab2/Screenshots/Screenshot_01.png "Рис. 1. Ввод данных") 
+
+Рис. 1. Ввод данных
+
 
 ![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab2/Screenshots/Screenshot_02.png "Рис. 2. Результат")
+
+Рис. 2. Результат
 
 **x**|**y**
 -----|-----
