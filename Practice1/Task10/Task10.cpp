@@ -15,7 +15,7 @@ int main()
 	cin >> number;
 	cin >> pow;
 	if (pow < 0)cout << "Введите неотрицательную степень" << endl;
-	else if (!pow) cout << result << endl;
+	else if (!pow || number == 1) cout << result << endl;
 	else {
 		while (!pow % 2) {
 			counter++;

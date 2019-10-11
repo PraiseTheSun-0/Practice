@@ -10,7 +10,7 @@ bool isEqual(double a, double b) {
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	double a, b, x1, x2, dx, y, x;
+	double a, b, x1, x2, dx, y, x, min = numeric_limits<double>::infinity(), max = -numeric_limits<double>::infinity();
 	cout << "Введите a, b, начало промежутка, конец промежутка, dx" << endl;
 	cin >> a >> b >> x1 >> x2 >> dx;
 	if (!dx) {
@@ -31,6 +31,9 @@ int main() {
 		else {
 			y = 1.0 + sin(-x);
 		}
+		if (y > max)max = y;
+		if (y < min)min = y;
 		cout << "При х = " << x << ", y = " << y << endl;
 	}
+	cout << "Минимальное значение - " << min << ", а максимальное - " << max << endl;
 }
