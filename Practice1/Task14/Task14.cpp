@@ -7,8 +7,9 @@ int main()
 	int s, l1, r1, l2, r2;
 	bool flag = false;
 	cin >> s>> l1>> r1>> l2>> r2;
+	int l2_2 = l2;
 	for (; l1 <= r1; l1++) {
-		for (; l2 <= r2; l2++) {
+		for (l2=l2_2; l2 <= r2; l2++) {
 			if (l1 + l2 == s) { 
 				flag = true;
 				break;
