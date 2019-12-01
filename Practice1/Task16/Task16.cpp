@@ -16,7 +16,7 @@ void factorization(int n) {
 			}
 		}
 	}
-	for (std::vector<int>::const_iterator it = A.begin(); it != A.end(); it++) {
+	for (auto it = A.begin(); it != A.end(); it++) {
 		if (it != A.end() - 1  && *it == *(it + 1))pow++;
 		else if (pow>1) {
 			std::cout << *it << "^" << pow;

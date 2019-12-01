@@ -35,4 +35,6 @@ int main()
 		cout << endl;
 		counter++;
 	}
+	delete[] min;
+	delete[] A;
 }

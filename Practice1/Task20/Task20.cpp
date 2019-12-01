@@ -6,7 +6,7 @@ void sort(int *a, int length)
 	for (int i = 0; i < length - 1; i++)
 	{
 		int counter = 0;
-		for (int k = 0; k < length - 1; k++)
+		for (int k = 0; k < length - i - 1; k++)
 			if (a[k] > a[k + 1])
 			{
 				int temp = a[k];
