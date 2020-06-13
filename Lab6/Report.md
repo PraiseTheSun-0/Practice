@@ -27,10 +27,9 @@
 
 #### Ход работы
 
-Подключим библиотеки
- ![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab3/Lab3/pic1.bmp) 
+ ![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab6/Lab6/Screenshots/Screenshot_1.jpg?raw=true) 
 
-Рис. 1. Картинка для декодирования
+Рис. 1. Подключим библиотеки
 
 Зарегистрируемся на сайте и получим API key: 817226b6d33f6b16f096dc7aeff635fe
 
@@ -121,8 +120,8 @@ int main() {
 	svr.listen("localhost", 3000);
 }
 ```
- ![](https://raw.githubusercontent.com/PraiseTheSun-0/Practice/master/Lab3/Lab3/pic1.bmp) 
+ ![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab6/Lab6/Screenshots/Screenshot_2.jpg?raw=true) 
 
-Рис. 1. Картинка для декодирования
+Рис. 2. Результат
 
 #### Вывод: я закрепид навыки разработки многофайловыx приложений. Изучил способы работы с API web-сервиса. Изучил процесс сериализации/десериализации данных.
