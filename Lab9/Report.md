@@ -37,7 +37,7 @@
 
 Рис. 2. Результат теста
 
-Пишем тесты и запускаем:
+Пишем [тесты](https://github.com/PraiseTheSun-0/Practice/tree/master/Lab9) и запускаем:
 
 ![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_3.png?raw=true)
 
