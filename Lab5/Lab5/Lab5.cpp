@@ -142,5 +142,4 @@ int main()
         outf << ", " << underAgeId[underAge];
         underAge++;
     }
-
 }
