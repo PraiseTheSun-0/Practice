@@ -5,7 +5,7 @@
 Кафедра компьютерной инженерии и моделирования
 <br/><br/>
 
-### Отчёт по лабораторной работе № 8<br/> по дисциплине "Программирование"
+### Отчёт по лабораторной работе № 9<br/> по дисциплине "Программирование"
 <br/>
 
 студента 1 курса группы ПИ-б-о 191(1)  
@@ -23,30 +23,38 @@
 
 Симферополь, 2019
 
-#### Цель: Настроить IDE Qt Creator для разработки приложений под android ОС. Изучить базовые понятия связанные с мобильной разработкой. Научиться создавать мобильные приложения при помощи фреймворка Qt 5.14.
+#### Цель: Познакомиться с Google Test и Google Mock Framework. Изучить базовые понятия относящийся к тестированию кода. Научиться тестировать классы в среде разработки Qt Creator.
 
-После установки всех необходимых программ и компонентов, и настройки Qt видим, что проблем не обнаружено:
+После настройки Qt выполняем проверку и запускаем тест по умолчанию 
 
-![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab8/Screenshots/Screenshot_1.png?raw=true)
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_1.png?raw=true)
 
-Рис. 1. Окно настроек Qt после настройки для сборки android
+Рис. 1. Результат теста в консоли
 
-Для проверки работы я выбрал проект Qt SCXML Calculator QML Example
+Повторяем через `Результаты тестирования`
 
-![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab8/Screenshots/Screenshot_3.png?raw=true)
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_2.png?raw=true)
 
-Рис. 2. Настройки проекта
+Рис. 2. Результат теста
 
-Запускаем отладку, появляется окно выбора устройства:
+Пишем тесты и запускаем:
 
-![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab8/Screenshots/Screenshot_2.png?raw=true)
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_3.png?raw=true)
 
-Рис. 3. Выбор устройства
+Рис. 3. Результаты тестов
 
-Результат видим в эмуляторе
+Видим ошибку в тесте. Она возникает тут:
 
-![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab8/Screenshots/Screenshot_4.png?raw=true)
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_4.png?raw=true)
 
-Рис. 4. Окно эмулятора
+Рис. 4. Ошибка
 
-#### Вывод: я настроил IDE Qt Creator для разработки приложений под android ОС, изучил базовые понятия связанные с мобильной разработкой, научился создавать мобильные приложения при помощи фреймворка Qt 5.14.
+Мы ожидаем close(), но метод вызывает open() :
+
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_5.png?raw=true)
+
+Рис. 5. Реализация метода
+
+Нужно в реализации метода open() заменить на close() и тест будет успешно пройден.
+
+#### Вывод: я познакомился с Google Test и Google Mock Framework, изучил базовые понятия относящийся к тестированию кода, научился тестировать классы в среде разработки Qt Creator.
