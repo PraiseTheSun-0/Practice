@@ -37,7 +37,7 @@
 
 Рис. 2. Результат теста
 
-Пишем тесты и запускаем:
+Пишем [тесты](https://github.com/PraiseTheSun-0/Practice/tree/master/Lab9) и запускаем:
 
 ![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_3.png?raw=true)
 
@@ -55,6 +55,10 @@
 
 Рис. 5. Реализация метода
 
-Нужно в реализации метода open() заменить на close() и тест будет успешно пройден.
+Нужно в реализации метода open() заменить на close() и тест будет успешно пройден:
+
+![](https://github.com/PraiseTheSun-0/Practice/blob/master/Lab9/Screenshots/Screenshot_6.png?raw=true)
+
+Рис. 6. После исправления
 
 #### Вывод: я познакомился с Google Test и Google Mock Framework, изучил базовые понятия относящийся к тестированию кода, научился тестировать классы в среде разработки Qt Creator.
